@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins","Bebas Neue", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #080808;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #080808;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    color: white;
+    font-family: "Bebas Neue";
+    font-size: 40px;
+    padding: 0 2rem;
+}
+
+.nav-items a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-left: 40px;
+}
+
+.nav-items a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.nav-items a:hover::before {
+    width: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.btn1 {
+    font-weight:600;
+    text-shadow: 1px 1px 10px #080808;
+    position: absolute;
+    padding: 80px 400px;
+    font-size: 20px;
+    border: 2px solid #fff;
+    color: white;
+    background-image: url(/images/blurbuttonjapan.png);
+    cursor: pointer;
+    margin: 10px;
+    top: 150px;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+/*Allows button to move up when hovered over with cursor*/
+.btn1:hover{
+    transform: translateY(-10px);
+}
+.btn2 {
+    font-weight:600;
+    text-shadow: 1px 1px 10px #080808;
+    position: absolute;
+    padding: 80px 400px;
+    font-size: 20px;
+    border: 2px solid #fff;
+    color: white;
+    background-image: url(/images/blurbuttonsacanime.png);
+    cursor: pointer;
+    margin: 10px;
+    top: 400px;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+/*Allows button to move up when hovered over with cursor*/
+.btn2:hover{
+    transform: translateY(-10px);
+}
+.btn3 {
+    font-weight:600;
+    text-shadow: 1px 1px 10px #080808;
+    position: absolute;
+    padding: 80px 400px;
+    font-size: 20px;
+    border: 2px solid #fff;
+    color: white;
+    background-image: url(/images/blurbuttonother.png);
+    cursor: pointer;
+    margin: 10px;
+    top: 650px;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+/*Allows button to move up when hovered over with cursor*/
+.btn3:hover{
+    transform: translateY(-10px);
+}

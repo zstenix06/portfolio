@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins","Bebas Neue", sans-serif;
+}
+/*Creates background image*/
+body {
+    min-height: 100vh;
+    background: url('images/DSC06657.JPG') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*Creates nav bar*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+    /*Creates left hand logo for nav bar*/
+.logo {
+    color: white;
+    font-family: "Bebas Neue";
+    font-size: 40px;
+    padding: 0 2rem;
+}
+    /*Creates right hand links to navigate to pages*/
+.nav-items a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-left: 40px;
+}
+        /*Creates hover effect for nav bar*/
+.nav-items a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.nav-items a:hover::before {
+    width: 100%;
+}
+
+/*Creates middle text saying "Zayden Stenix"*/
+    /*Creates a flex container to hold text in to move it around*/
+.outertxt{
+    display: flex;
+    justify-content: center;
+    padding-top: 400px;
+}
+.middletxt {
+    color: white;
+    font-family: "Bebas Neue";
+    font-size: 80px;
+}
+
+/*Creates Button*/
+    /*Creates a flex container to hold button in to move it around*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn1 {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid #fff;
+    color: white;
+    background: none;
+    position: absolute;
+    cursor: pointer;
+    margin: 10px;
+    top: 500px;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+/*Allows button to move up when hovered over with cursor*/
+.btn1:hover{
+    transform: translateY(-10px);
+}
