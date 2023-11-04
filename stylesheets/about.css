@@ -14,27 +14,28 @@ body {
     background-color: #080808;
 }
 
-nav {
+.biggerboy{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 50px;
     background: #080808;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content:space-between;
     align-items: center;
     z-index: 100;
 }
 
-
+    /*Creates left hand logo for nav bar*/
 .logo {
     color: white;
     font-family: "Bebas Neue";
     font-size: 40px;
     padding: 0 2rem;
 }
-
+    /*Creates right hand links to navigate to pages*/
 .nav-items a {
     position: relative;
     text-decoration: none;
@@ -43,8 +44,8 @@ nav {
     color: white;
     margin-left: 40px;
 }
-
-.nav-items a::before {
+        /*Creates hover effect for nav bar*/
+.nav-items a:not(.menu-icon)::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -55,25 +56,26 @@ nav {
     transition: .3s;
 }
 
-.nav-items a:hover::before {
+.nav-items a:not(.menu-icon):hover::before {
     width: 100%;
 }
 /*Edits the "the photo man himself" doodle*/
 .randomtext {
     position: absolute;
-    top: 170px;
+    top: 130px;
     left: 480px;
     width: 500px;
     filter: drop-shadow(5px 5px 10px #080808);
 }
 
 .mainphoto {
-    height: 700px;
+    height: 650px;
     margin-left: 100px;
 }
 /*Master flex container to hold the image and text columns in*/
 .maincontainer {
     display: flex;
+    flex-direction: row;
     padding-top: 150px;
     justify-content: flex-start;
 }
@@ -90,11 +92,11 @@ nav {
     font-size: 24px;
     padding-top: 50px;
     padding-left: 50px;
-    width: 1000px;
 }
 /*Creates a flex container for the two text items so they are in a column*/
 .sepcontainer2 {
     display: flex;
+    width: 900px;
     flex-direction: column;
 }
 .centertext {
@@ -105,8 +107,8 @@ nav {
     justify-content: center;
     margin-top: 50px;
 }
+
 .social-menu ul {
-    position: flex;
     justify-content: center;
     padding: 0;
     margin: 30px;
@@ -151,4 +153,77 @@ nav {
 }
 .social-menu ul li:nth-child(4) a:hover {
     background-color: #049bec;
+}
+
+.sidebar{
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0px;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: #0808084d;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.103);
+}
+.nav-item-side a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-indent: 20px;
+}
+
+.sidebar .logo {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: rgba(14, 14, 14, 0.336);
+}
+
+.menu-icon {
+    fill: #fff;
+    top: 5px;
+    display: none;
+}
+
+.close-icon {
+    fill: #fff;
+    padding-top: 30px;
+    padding-left: 174px;
+    
+    display: block;
+    
+}
+
+@media(max-width: 910px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+@media(max-width: 910px){
+    .maincontainer{
+        flex-direction: column;
+    }
+    .mainphoto{
+        height: max-content;
+    }
 }

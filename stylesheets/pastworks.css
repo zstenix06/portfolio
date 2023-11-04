@@ -14,7 +14,7 @@ body {
     background-color: #080808;
 }
 
-nav {
+.biggerboy {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ nav {
     margin-left: 40px;
 }
 
-.nav-items a::before {
+.nav-items a:not(.menu-icon)::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -55,7 +55,7 @@ nav {
     transition: .3s;
 }
 
-.nav-items a:hover::before {
+.nav-items a:not(.menu-icon):hover::before {
     width: 100%;
 }
 .container {
@@ -124,4 +124,69 @@ nav {
 /*Allows button to move up when hovered over with cursor*/
 .btn3:hover{
     transform: translateY(-10px);
+}
+
+.sidebar{
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0px;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: #0808084d;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.103);
+}
+.nav-item-side a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-indent: 20px;
+}
+
+.sidebar .logo {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: rgba(14, 14, 14, 0.336);
+}
+
+.menu-icon {
+    fill: #fff;
+    top: 5px;
+    display: none;
+}
+
+.close-icon {
+    fill: #fff;
+    padding-top: 30px;
+    padding-left: 174px;
+    
+    display: block;
+    
+}
+
+@media(max-width: 910px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
 }
