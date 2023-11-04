@@ -11,8 +11,8 @@
 /*Creates background image*/
 body {
     min-height: 100vh;
-    background: url('images/DSC06657.JPG') no-repeat;
-    background-size: cover;
+    background: url('images/DSC06657edit4.JPG.png') no-repeat;
+    background-size:cover;
     background-position: center;
 }
 /*Creates nav bar*/
