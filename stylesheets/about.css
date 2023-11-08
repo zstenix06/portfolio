@@ -60,14 +60,6 @@ body {
 .nav-items a:not(.menu-icon):hover::before {
     width: 100%;
 }
-/*Edits the "the photo man himself" doodle*/
-.randomtext {
-    position: absolute;
-    top: 130px;
-    left: 480px;
-    width: 500px;
-    filter: drop-shadow(5px 5px 10px #080808);
-}
 
 .mainphoto {
     height: 650px;
@@ -108,15 +100,16 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    margin-right: 70px;
 }
-
+.social-menu{
+    display: flex;
+    justify-content: center;
+}
 .social-menu ul {
     justify-content: center;
     padding: 0;
     margin: 30px;
     display: flex;
-    margin-right: 100px;
 }
 .social-menu ul li {
     list-style: none;
@@ -223,11 +216,23 @@ body {
         width: 100%;
     }
 }
-@media(max-width: 910px){
+@media(max-width: 1135px){
     .maincontainer{
         flex-direction: column;
     }
     .mainphoto{
         height: max-content;
+        margin-right: 100px;
+    }
+    .sepcontainer2{
+        text-align: center;
+        margin: auto;
+    }
+    .sidetext{
+        padding-left: 0;
+    }
+    .paratext{
+        margin-right: 0px;
+        padding-left: 0;
     }
 }
