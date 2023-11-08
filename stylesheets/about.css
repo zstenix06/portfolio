@@ -30,11 +30,13 @@ body {
 }
 
     /*Creates left hand logo for nav bar*/
-.logo {
+.logo a{
     color: white;
     font-family: "Bebas Neue";
     font-size: 40px;
+    font-weight: 500;
     padding: 0 2rem;
+    text-decoration: none;
 }
     /*Creates right hand links to navigate to pages*/
 .nav-items a {
@@ -179,7 +181,8 @@ body {
     text-indent: 20px;
 }
 
-.sidebar .logo {
+.sidebar .logo a{
+    display: block;
     padding-bottom: 10px;
     text-align: center;
 }

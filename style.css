@@ -128,7 +128,8 @@ body {
     text-indent: 20px;
 }
 
-.sidebar .logo {
+.sidebar .logo a{
+    display: block;
     padding-bottom: 10px;
     text-align: center;
 }
